@@ -18,14 +18,20 @@
 ### 1. Clone my repo
 ```bash
 git clone https://github.com/TiaJain/team-management-app.git
-cd team-management
+cd team-management-app
 ```
 
 ### 2. Backend Setup (Django API)
-Run these commands in order to navigate to the backend directory, run database migrations, and start the backend server:
+Run these commands in order to navigate to the backend directory, create/activate the virtual environment, install required dependencies, run database migrations, and start the backend server:
 
 ```bash
 cd team-management
+
+python3 -m venv venv
+source venv/bin/activate 
+
+pip install -r requirements.txt
+
 python3 manage.py migrate
 python3 manage.py runserver
 ```
@@ -48,3 +54,7 @@ Open http://localhost:3000 and try out the following basic functionalities:
 1. Add a new team member via the "+" button.
 2. Edit an existing team member.
 3. Delete a team member (via the red Delete button on the Edit page).
+
+### Helpful References for learning Django and building the app:
+- https://www.django-rest-framework.org/tutorial/quickstart/
+- https://docs.djangoproject.com/en/5.1/intro/tutorial01/

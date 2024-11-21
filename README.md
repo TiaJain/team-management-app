@@ -22,7 +22,7 @@ cd team-management-app
 ```
 
 ### 2. Backend Setup (Django API)
-Run these commands in order to navigate to the backend directory, create/activate the virtual environment, install required dependencies, run database migrations, and start the backend server:
+Run these commands in order to navigate to the backend directory, create/activate the virtual environment, install required dependencies, create a database migration, apply the migration, and start the backend server:
 
 Note: if you are getting errors with "pip install -r requirements.txt", try running this command to manually install the required packages: pip install django djangorestframework django-cors-headers
 
@@ -32,6 +32,7 @@ source venv/bin/activate
 
 pip install -r requirements.txt
 
+python3 manage.py makemigrations
 python3 manage.py migrate
 python3 manage.py runserver
 ```
